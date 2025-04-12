@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto Creado</title>
-</head>
-<body>
-    Contacto creado correctamente
+{% extends "base.html" %}
+{% block content %}
 
 
-    Datos del contacto:
-    <ul>
+<div class="flex flex-col items-center justify-center">
+    <p>
+        Contacto creado correctamente
+    </p>
+    
+    
+    
+    <p>
+        Datos del contacto:
+    </p>
+    <ul class="list-disc list-inside">
         <li>Nombre: {{ contacto.nombre }}</li>
         <li>Apellidos: {{ contacto.apellidos }}</li>
         <li>Teléfono: {{ contacto.telefono }}</li>
         <li>Email: {{ contacto.mail }}</li>
     </ul>
-    
-    <button><a href="/">Volver a la página principal</a></button>
-</body>
-</html>
+</div>
+
+{% endblock %}

@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borrar contacto</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="flex flex-col items-center justify-center">
+
+
     <h1>Lista de Contactos</h1>
     <ul>
         {% for contacto in contactos %}
-            <li>{{ contacto.nombre }} {{ contacto.apellidos }} - {{ contacto.telefono }} - {{ contacto.mail }} - <a href="/delete_contact/{{ loop.index0 }}">Borrar</a></li>
+        <li>{{ contacto.nombre }} {{ contacto.apellidos }} - {{ contacto.telefono }} - {{ contacto.mail }} - <a class="bg-red-500 hover:bg-red-700 text-red-200" href="/delete_contact/{{ loop.index0 }}">Borrar</a></li>
         {% endfor %}
     </ul>
-    
-</body>
-</html>
+</div>
+{% endblock %}

@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactos</title>
-</head>
-<body>
-
+{% extends "base.html" %}
+{% block content %}
+<div class="flex flex-col items-center justify-center">
     <h1>Lista de Contactos</h1>
     <ul>
         {% for contacto in contactos %}
             <li>{{ contacto.nombre }} {{ contacto.apellidos }} - {{ contacto.telefono }} - {{ contacto.mail }}</li>
         {% endfor %}
     </ul>
+</div>
 
-    <button><a href="/">Volver a la página principal</a></button>
-    
-</body>
-</html>
+
+{% endblock %}
