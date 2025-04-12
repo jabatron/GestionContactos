@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrar contacto</title>
+</head>
+<body>
+    <h1>Lista de Contactos</h1>
+    <ul>
+        {% for contacto in contactos %}
+            <li>{{ contacto.nombre }} {{ contacto.apellidos }} - {{ contacto.telefono }} - {{ contacto.mail }} - <a href="/delete_contact/{{ loop.index0 }}">Borrar</a></li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

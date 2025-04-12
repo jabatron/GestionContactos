@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Formulario para añadir contacto</h1>
+    <form action="/contact" method="POST" json="true">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="surname">Apellidos:</label><br>
+        <input type="text" id="surname" name="surname"><br><br>
+        <label for="phone">Teléfono:</label><br>
+        <input type="text" id="phone" name="phone"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        <input type="submit" value="Añadir contacto">
+    </form>
+
+    <button><a href="/">Volver a la página principal</a></button>
+    
+</body>
+</html>
